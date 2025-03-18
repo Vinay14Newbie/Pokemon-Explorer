@@ -106,13 +106,15 @@ export const App = () => {
 
   return (
     <div className="p-4  bg-[url(https://i.redd.it/77g03lpc60a61.jpg)] bg-cover bg-center min-h-screen bg-fixed">
-      <input
-        type="text"
-        placeholder="Search Pokémon..."
-        value={searchQuery}
-        onChange={handleSearch}
-        className="border p-2 rounded mb-4"
-      />
+      <div className="fixed top-3 left-3 w-[190px] bg-white z-50 shadow-md">
+        <input
+          type="text"
+          placeholder="Search Pokémon..."
+          value={searchQuery}
+          onChange={handleSearch}
+          className="border p-2 rounded w-full"
+        />
+      </div>
 
       {loading ? (
         <p>Loading...</p>
